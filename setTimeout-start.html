@@ -9,9 +9,11 @@
 	<div class="completion">Not yet</div>
 	<script>
 		function wait(ms) {
-			return new Promise(function(resolve, reject) {
-				window.setTimeout(function() {resolve(ms)}, ms);
+			return new Promise(function(resolve) {
 				console.log(this)
+				window.setTimeout(function() {
+					resolve()
+				}, ms);
 			})
 		};
 
